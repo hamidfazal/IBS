@@ -3,897 +3,858 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Journey at IBS — Institute of Behavioral Sciences</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Five Years at IBS — Dr. Hamid Fazal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a365d;
-            --secondary: #2c5282;
-            --accent: #c9a227;
-            --accent-light: #f0e68c;
-            --text: #2d3748;
-            --text-light: #718096;
-            --bg: #f7fafc;
-            --card: #ffffff;
-            --border: #e2e8f0;
+            --navy: #0f2744;
+            --navy-deep: #091a30;
+            --teal: #1a5f5a;
+            --gold: #c9a84c;
+            --gold-light: #e8d5a3;
+            --gold-pale: #faf4e6;
+            --cream: #faf8f5;
+            --warm: #f5f1ec;
+            --ink: #1a1a1a;
+            --muted: #5a5a5a;
+            --light: #8a8a8a;
+            --white: #ffffff;
+            --border: rgba(0,0,0,0.07);
+            --night: #060e1a;
+
+            --shadow-sm: 0 2px 12px rgba(15,39,68,0.06);
+            --shadow-md: 0 8px 40px rgba(15,39,68,0.10);
+            --shadow-lg: 0 20px 60px rgba(15,39,68,0.14);
+
+            --grad-dark: linear-gradient(135deg, #0f2744 0%, #1a3a52 60%, #1a5f5a 100%);
+            --grad-gold: linear-gradient(135deg, #c9a84c 0%, #e8d5a3 50%, #c9a84c 100%);
+            --grad-night: linear-gradient(180deg, #060e1a 0%, #0f2744 60%, #1a3a52 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--text);
-            background: var(--bg);
+            background: var(--cream);
+            color: var(--ink);
             line-height: 1.8;
             overflow-x: hidden;
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+        /* ── TYPE ── */
+        h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; letter-spacing: -0.02em; }
+        h4, h5, .label { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
+        em { font-style: italic; font-family: 'Lora', serif; }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(250,248,245,0.94);
+            backdrop-filter: blur(18px);
+            z-index: 100;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%; height: 68px;
+            border-bottom: 1px solid var(--border);
         }
 
+        .nav-home {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.88rem; font-weight: 700;
+            color: var(--navy); text-decoration: none;
+            display: flex; align-items: center; gap: 8px;
+            letter-spacing: 0.01em;
+            transition: color 0.2s;
+        }
+        .nav-home:hover { color: var(--gold); }
+        .nav-home::before { content: '←'; color: var(--gold); }
+
+        .nav-title {
+            font-family: 'Lora', serif;
+            font-size: 1rem; font-style: italic;
+            color: var(--muted); font-weight: 400;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            background: var(--grad-night);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            padding: 9rem 5% 6rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Ambient night glow */
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.4;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
         }
 
-        .hero-content {
-            text-align: center;
-            z-index: 1;
-            padding: 2rem;
-            max-width: 900px;
+        /* Subtle grid lines — like a hospital corridor at night */
+        .hero::after {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
         }
 
-        .hero-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 50px;
-            color: var(--accent-light);
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-            animation: fadeInDown 1s ease-out;
+        .hero-eyebrow {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.4rem;
+            position: relative; z-index: 1;
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            color: #fff;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            font-size: clamp(2.6rem, 6vw, 4.2rem);
+            color: var(--white);
+            line-height: 1.12;
+            margin-bottom: 1rem;
+            position: relative; z-index: 1;
         }
 
-        .hero h1 span {
-            color: var(--accent);
-            font-style: italic;
+        .hero h1 em {
+            color: var(--gold-light);
+            display: block;
+            font-size: 0.65em;
+            font-weight: 400;
+            margin-top: 0.3rem;
         }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: rgba(255,255,255,0.8);
-            font-weight: 300;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.4s both;
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.55);
+            max-width: 560px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+            position: relative; z-index: 1;
+            line-height: 1.75;
         }
 
-        .hero-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.6s both;
+        .hero-stats {
+            display: flex; gap: 1px;
+            position: relative; z-index: 1;
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 14px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
         }
 
-        .hero-meta-item {
+        .hero-stat {
+            padding: 1.4rem 2.2rem;
+            background: rgba(255,255,255,0.04);
+            text-align: center;
+            border-right: 1px solid rgba(201,168,76,0.15);
+            transition: background 0.3s;
+        }
+        .hero-stat:last-child { border-right: none; }
+        .hero-stat:hover { background: rgba(201,168,76,0.07); }
+
+        .hero-stat-num {
+            display: block;
+            font-family: 'Lora', serif;
+            font-size: 1.9rem; font-weight: 700;
+            color: var(--gold-light);
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-stat-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.68rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ── SCROLL CUE ── */
+        .scroll-cue {
+            position: absolute; bottom: 2.5rem; left: 50%;
+            transform: translateX(-50%);
+            display: flex; flex-direction: column; align-items: center;
+            gap: 6px; z-index: 1;
+            animation: pulse 2.5s ease-in-out infinite;
+        }
+        .scroll-cue span {
+            font-size: 0.65rem; letter-spacing: 0.15em;
+            text-transform: uppercase; color: rgba(255,255,255,0.3);
+            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+        }
+        .scroll-line {
+            width: 1px; height: 40px;
+            background: linear-gradient(to bottom, rgba(201,168,76,0.5), transparent);
+        }
+        @keyframes pulse { 0%,100%{opacity:0.5} 50%{opacity:1} }
+
+        /* ── INTRO BANNER ── */
+        .intro-band {
+            background: var(--gold-pale);
+            border-top: 3px solid var(--gold);
+            border-bottom: 1px solid rgba(201,168,76,0.2);
+            padding: 2.2rem 5%;
+        }
+        .intro-band-inner {
+            max-width: 860px; margin: 0 auto;
+            font-family: 'Lora', serif;
+            font-size: 1.18rem; font-style: italic;
+            color: var(--navy); line-height: 1.85;
             text-align: center;
         }
+        .intro-band-inner strong {
+            font-style: normal;
+            font-weight: 700; color: var(--teal);
+        }
 
-        .hero-meta-item .number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--accent);
-            font-weight: 600;
+        /* ── MAIN LAYOUT ── */
+        .page-body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+        }
+
+        /* ── SECTION LABEL ── */
+        .section-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.6rem;
             display: block;
         }
 
-        .hero-meta-item .label {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator svg {
-            width: 30px;
-            height: 30px;
-            stroke: rgba(255,255,255,0.5);
-        }
-
-        /* Timeline */
-        .timeline-section {
-            padding: 6rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--border), var(--accent), var(--border));
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 4rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-            margin-right: 55%;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: 55%;
-            text-align: left;
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: var(--card);
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            border: 1px solid var(--border);
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 2rem;
-            width: 16px;
-            height: 16px;
-            background: var(--accent);
-            border-radius: 50%;
-            border: 4px solid var(--card);
-            box-shadow: 0 0 0 4px var(--accent-light);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            right: -38px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::before {
-            left: -38px;
-        }
-
-        .timeline-date {
-            display: inline-block;
-            padding: 0.25rem 1rem;
-            background: var(--accent-light);
-            color: var(--primary);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-        }
-
-        .timeline-text {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .timeline-text strong {
-            color: var(--text);
-        }
-
-        /* Highlight Cards */
-        .highlights {
-            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
-            padding: 6rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .highlights::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: rgba(255,255,255,0.02);
-            border-radius: 50%;
-        }
-
-        .highlights-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .highlights h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .highlight-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .highlight-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.4s ease;
-        }
-
-        .highlight-card:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-8px);
-        }
-
-        .highlight-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .highlight-card h3 {
-            color: #fff;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .highlight-card p {
-            color: rgba(255,255,255,0.75);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        /* Appreciation Section */
-        .appreciation {
-            padding: 6rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .appreciation-card {
-            background: var(--card);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-            border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .appreciation-card::before {
-            content: '"';
-            font-family: 'Playfair Display', serif;
-            font-size: 15rem;
-            color: var(--accent-light);
-            position: absolute;
-            top: -4rem;
-            left: 1rem;
-            line-height: 1;
-            opacity: 0.5;
-        }
-
-        .appreciation-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.5rem;
-            background: linear-gradient(135deg, var(--accent-light), #fff);
-            border-radius: 50px;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--accent);
-        }
-
-        .appreciation-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--primary);
-            line-height: 1.8;
-            font-style: italic;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .appreciation-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .author-info {
-            text-align: left;
-        }
-
-        .author-name {
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .author-title {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* People Section */
-        .people {
-            padding: 6rem 2rem;
-            background: var(--bg);
-        }
-
-        .people-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .people h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .people-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .person-card {
-            background: var(--card);
-            border-radius: 20px;
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .person-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .person-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .person-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-        }
-
-        .person-avatar {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-        }
-
-        .person-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--primary);
+        .section-title {
+            font-size: 1.9rem;
+            color: var(--navy);
             margin-bottom: 0.5rem;
+            line-height: 1.2;
         }
 
-        .person-role {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
+        .section-rule {
+            width: 40px; height: 3px;
+            background: var(--grad-gold);
+            border-radius: 2px;
+            margin-bottom: 2.5rem;
         }
 
-        .person-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
+        /* ── STORY BLOCKS ── */
+        .story-block {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            align-items: start;
+        }
+
+        .story-block.reverse {
+            grid-template-columns: 2fr 1fr;
+        }
+        .story-block.reverse .story-aside { order: 2; }
+        .story-block.reverse .story-main { order: 1; }
+
+        .story-main p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .story-main p:last-child { margin-bottom: 0; }
+
+        /* ── ASIDE CARDS ── */
+        .aside-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            position: sticky;
+            top: 90px;
+        }
+
+        .aside-card .card-eyebrow {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.65rem; font-weight: 700;
+            letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 0.8rem;
+        }
+
+        .aside-card h4 {
+            font-size: 1.05rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .aside-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
             line-height: 1.7;
         }
 
-        .person-card.featured {
-            border: 2px solid var(--accent);
-            background: linear-gradient(180deg, var(--card) 0%, #fffef0 100%);
+        .aside-card .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 1.2rem 0;
         }
 
-        .person-card.featured .person-avatar {
-            background: linear-gradient(135deg, var(--accent), #d4af37);
-            color: var(--primary);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--primary);
-            color: rgba(255,255,255,0.7);
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        .footer p {
-            font-size: 0.9rem;
-        }
-
-        .footer .heart {
-            color: #e53e3e;
+        .aside-tag {
             display: inline-block;
-            animation: heartbeat 1.5s ease-in-out infinite;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            margin: 0.2rem 0.2rem 0 0;
+        }
+        .aside-tag.teal {
+            background: rgba(26,95,90,0.08);
+            color: var(--teal);
+            border: 1px solid rgba(26,95,90,0.15);
+        }
+        .aside-tag.navy {
+            background: rgba(15,39,68,0.07);
+            color: var(--navy);
+            border: 1px solid rgba(15,39,68,0.12);
+        }
+        .aside-tag.gold {
+            background: rgba(201,168,76,0.1);
+            color: #7a5e1a;
+            border: 1px solid rgba(201,168,76,0.25);
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* ── NIGHT SHIFT SECTION ── */
+        .night-section {
+            background: var(--grad-night);
+            border-radius: 24px;
+            padding: 4rem 4rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .night-section::before {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
+        .night-section .section-label { color: var(--gold); }
+        .night-section .section-title { color: var(--white); }
+
+        .night-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 2.5rem;
         }
 
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            14% { transform: scale(1.1); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.1); }
-            70% { transform: scale(1); }
+        .night-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-top: 2px solid rgba(201,168,76,0.4);
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .night-card:hover {
+            background: rgba(255,255,255,0.07);
+            transform: translateY(-3px);
         }
 
-        /* Responsive */
+        .night-card h4 {
+            font-size: 0.88rem;
+            color: var(--gold-light);
+            margin-bottom: 0.6rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .night-card p {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+        }
+
+        /* ── PULLQUOTE ── */
+        .pullquote {
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: var(--gold-pale);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .pullquote p {
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--navy);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* ── MENTOR CARDS ── */
+        .mentors-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .mentor-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--gold);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .mentor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mentor-role {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 0.6rem;
+        }
+
+        .mentor-name {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem; font-weight: 700;
+            color: var(--navy); margin-bottom: 0.5rem;
+            line-height: 1.25;
+        }
+
+        .mentor-title {
+            font-size: 0.82rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .mentor-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* ── HONOUR BLOCK ── */
+        .honour-block {
+            background: var(--navy);
+            border-radius: 20px;
+            padding: 3.5rem;
+            margin: 4rem 0;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2.5rem;
+            align-items: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .honour-block::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+        }
+
+        .honour-seal {
+            width: 90px; height: 90px;
+            background: rgba(201,168,76,0.12);
+            border: 2px solid rgba(201,168,76,0.3);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .honour-content .honour-eyebrow {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.18em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 0.6rem;
+        }
+
+        .honour-content h3 {
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 0.8rem;
+            line-height: 1.25;
+        }
+
+        .honour-content p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.75;
+            max-width: 560px;
+        }
+
+        .honour-content p strong {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        /* ── CLOSING ── */
+        .closing-band {
+            background: var(--warm);
+            border-top: 1px solid var(--border);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .closing-band h2 {
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .closing-band p {
+            max-width: 620px;
+            margin: 0 auto 2rem;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .portfolio-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pill-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.82rem; font-weight: 700;
+            padding: 0.65rem 1.4rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: 0.02em;
+        }
+
+        .pill-link.dark {
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(15,39,68,0.2);
+        }
+        .pill-link.dark:hover { background: var(--navy-deep); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(15,39,68,0.3); }
+
+        .pill-link.outline {
+            background: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+        .pill-link.outline:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--light);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer a { color: var(--teal); text-decoration: none; }
+        footer a:hover { color: var(--gold); }
+
+        /* ── FADE IN ── */
+        .fade-up {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: none; }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content,
-            .timeline-item:nth-child(even) .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 60px;
-                margin-right: 0;
-                text-align: left;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content::before,
-            .timeline-item:nth-child(even) .timeline-content::before {
-                left: -38px;
-                right: auto;
-            }
-
-            .hero-meta {
-                gap: 1.5rem;
-            }
-
-            .highlight-grid,
-            .people-grid {
+            .story-block, .story-block.reverse {
                 grid-template-columns: 1fr;
             }
-        }
-
-        /* Print styles */
-        @media print {
-            .hero {
-                min-height: auto;
-                padding: 3rem 1rem;
-            }
-            .scroll-indicator { display: none; }
-            .timeline-item { opacity: 1; transform: none; }
+            .story-block.reverse .story-aside,
+            .story-block.reverse .story-main { order: unset; }
+            .aside-card { position: static; }
+            .night-grid { grid-template-columns: 1fr; }
+            .hero-stats { flex-direction: column; border-radius: 12px; }
+            .hero-stat { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.15); }
+            .hero-stat:last-child { border-bottom: none; }
+            .honour-block { grid-template-columns: 1fr; text-align: center; }
+            .honour-seal { margin: 0 auto; }
+            .night-section { padding: 2.5rem 1.8rem; }
+            .page-body { padding: 3.5rem 5%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">A Five-Year Journey</div>
-            <h1>My Journey at <span>IBS</span></h1>
-            <p class="hero-subtitle">Institute of Behavioral Sciences — Dr. A.Q. Khan Center<br>Where Psychiatry Met Purpose</p>
-            <div class="hero-meta">
-                <div class="hero-meta-item">
-                    <span class="number">5</span>
-                    <span class="label">Years</span>
-                </div>
-                <div class="hero-meta-item">
-                    <span class="number">6+</span>
-                    <span class="label">Nights/Week</span>
-                </div>
-                <div class="hero-meta-item">
-                    <span class="number">∞</span>
-                    <span class="label">Lives Touched</span>
-                </div>
+<!-- NAV -->
+<nav>
+    <a href="https://hamidfazal.github.io/" class="nav-home">Dr. Hamid Fazal</a>
+    <span class="nav-title">Five Years at IBS</span>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <p class="hero-eyebrow">A Career Chapter · Karachi, Pakistan</p>
+    <h1>
+        Five Years at IBS
+        <em>Institute of Behavioral Sciences, Dr. A.Q. Khan Center</em>
+    </h1>
+    <p class="hero-sub">
+        Where the nights were long, the wards were demanding, and every shift deepened a clinical fluency that textbooks alone could never have taught me.
+    </p>
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <span class="hero-stat-num">5</span>
+            <span class="hero-stat-label">Years of Service</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-num">6</span>
+            <span class="hero-stat-label">Nights a Week</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-num">24h</span>
+            <span class="hero-stat-label">Sunday & Holiday Shifts</span>
+        </div>
+        <div class="hero-stat">
+            <span class="hero-stat-num">2019</span>
+            <span class="hero-stat-label">Honourably Concluded</span>
+        </div>
+    </div>
+    <div class="scroll-cue">
+        <span>Read the story</span>
+        <div class="scroll-line"></div>
+    </div>
+</div>
+
+<!-- INTRO BAND -->
+<div class="intro-band">
+    <p class="intro-band-inner">
+        From October 2014 to February 2019, I served as <strong>Night RMO</strong> at the Institute of Behavioral Sciences — a dedicated psychiatric and drug rehabilitation center in Karachi. 
+        What began as a door opened by a mentor became one of the most formative and defining chapters of my clinical life.
+    </p>
+</div>
+
+<!-- MAIN BODY -->
+<div class="page-body">
+
+    <!-- HOW IT BEGAN -->
+    <div class="story-block fade-up">
+        <div class="story-aside">
+            <div class="aside-card">
+                <p class="card-eyebrow">The Connection</p>
+                <h4>Professor Raza-ur-Rehman</h4>
+                <p>Head of Department of Psychiatry, Civil Hospital Karachi — one of Pakistan's most distinguished senior psychiatrists. His generosity in allowing extended clinical attachment, and his quiet recommendation that changed a career trajectory.</p>
+                <div class="divider"></div>
+                <span class="aside-tag teal">Professor of Psychiatry</span>
+                <span class="aside-tag navy">Civil Hospital Karachi</span>
+                <span class="aside-tag gold">Mentor</span>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="section-header">
-            <h2>The Journey</h2>
-            <p>From a clinical attachment to becoming a night RMO — a transformative path through psychiatry and rehabilitation.</p>
-        </div>
-
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">2014 — The Beginning</span>
-                    <h3 class="timeline-title">The Mentor's Guidance</h3>
-                    <p class="timeline-text">
-                        During my clinical attachment at Civil Hospital Karachi, <strong>Prof. Dr. Raza ur Rehman</strong> — Head of Department of Psychiatry and one of Pakistan's top psychiatrists — became my mentor. His kindness and generosity allowed me to learn without bounds. When I sought a part-time opportunity to support my educational expenses while preparing for the <strong>MRCPsych Part 1</strong> exam, he guided me toward a reliever RMO position at IBS.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">September 2014</span>
-                    <h3 class="timeline-title">The Interview & Training</h3>
-                    <p class="timeline-text">
-                        I met <strong>Madam Shahla Ahmed</strong>, the administrator, whose support was instrumental in my joining. Following her, I was interviewed by <strong>Professor Sohail</strong>. I was asked to complete a two-week training period. Despite the distance and relying solely on public transport without a car, I committed to making it work.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">October 1, 2014</span>
-                    <h3 class="timeline-title">Independent RMO</h3>
-                    <p class="timeline-text">
-                        I began working independently as a Reliever RMO, covering duties whenever and wherever needed. This marked the true beginning of my hands-on experience in psychiatric care and drug rehabilitation.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">Late 2014 — Early 2015</span>
-                    <h3 class="timeline-title">Fixed Night RMO</h3>
-                    <p class="timeline-text">
-                        Management offered me a <strong>fixed night RMO position</strong> — 6 nights a week, with Sunday and gazetted holidays as 24-hour shifts with overtime. I spent more time at the hospital than at home, returning only for a few hours of sleep and chores before heading back each evening.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">2014 — 2019</span>
-                    <h3 class="timeline-title">Five Years of Immersion</h3>
-                    <p class="timeline-text">
-                        IBS was a psychiatry and drug rehabilitation center. Spending entire nights with patients — from their worst moments at admission through every stage of recovery — honed my diagnostic skills and deepened my understanding of mental illness and addiction. I learned to recognize stages, factors, and recovery patterns quickly, and to provide emergency measures with confidence.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">During Tenure</span>
-                    <h3 class="timeline-title">Letter of Appreciation</h3>
-                    <p class="timeline-text">
-                        A distinguished achievement: I received a <strong>Letter of Appreciation</strong> from <strong>Dr. Abdul Qadeer Khan</strong>, co-founder of the institute and Pakistan's renowned top nuclear scientist, recognizing my dedicated services at IBS.
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">February 2019</span>
-                    <h3 class="timeline-title">A Fond Farewell</h3>
-                    <p class="timeline-text">
-                        My tenure at IBS concluded on <strong>good terms</strong>, closing a remarkable chapter of five years filled with learning, growth, and meaningful connections with countless patients and colleagues.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Highlights Section -->
-    <section class="highlights">
-        <div class="highlights-container">
-            <h2>What I Gained</h2>
-            <div class="highlight-grid">
-                <div class="highlight-card">
-                    <div class="highlight-icon">🧠</div>
-                    <h3>Clinical Excellence</h3>
-                    <p>Exceptional diagnostic skills developed through continuous exposure to diverse psychiatric conditions and substance use disorders.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🤝</div>
-                    <h3>Patient Interaction</h3>
-                    <p>Profound ability to connect with mentally challenged patients and drug addicts, understanding their journey from crisis to recovery.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">⚡</div>
-                    <h3>Emergency Response</h3>
-                    <p>Quick recognition of critical stages and timely provision of emergency measures, built through countless night shifts.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🌙</div>
-                    <h3>Resilience & Dedication</h3>
-                    <p>Six nights a week for five years — a testament to commitment, balancing public transport commutes with unwavering professional duty.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">📚</div>
-                    <h3>Exam Preparation</h3>
-                    <p>Supported my MRCPsych Part 1 preparation while gaining invaluable practical experience that textbooks could never provide.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🏆</div>
-                    <h3>Recognition</h3>
-                    <p>Honored with an appreciation letter from Dr. Abdul Qadeer Khan, acknowledging dedicated service to the institute's mission.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appreciation Section -->
-    <section class="appreciation">
-        <div class="appreciation-card">
-            <div class="appreciation-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                Letter of Appreciation
-            </div>
-            <p class="appreciation-text">
-                Received a Letter of Appreciation from Dr. Abdul Qadeer Khan, co-founder of the Institute of Behavioral Sciences and Pakistan's legendary nuclear scientist, for dedicated services rendered at the institute.
+        <div class="story-main">
+            <span class="section-label">How It Began</span>
+            <h2 class="section-title">A Mentor's Door, <em>Quietly Opened</em></h2>
+            <div class="section-rule"></div>
+            <p>
+                I had been conducting clinical attachments under <strong>Professor Raza-ur-Rehman</strong> at Civil Hospital Karachi — a privilege extended with characteristic warmth by one of Pakistan's most respected psychiatrists, who had made it clear that the attachment could continue for as long as it was useful. It was during this period that I was also preparing for the MRCP Psychiatry Part 1 examination, and the question of covering educational expenses naturally arose.
             </p>
-            <div class="appreciation-author">
-                <div class="author-avatar">AQ</div>
-                <div class="author-info">
-                    <div class="author-name">Dr. Abdul Qadeer Khan</div>
-                    <div class="author-title">Co-founder, IBS | Pakistan's Renowned Nuclear Scientist</div>
-                </div>
+            <p>
+                When I mentioned this to Professor Raza-ur-Rehman, he did not hesitate. He mentioned a Relieving RMO position at the <strong>Institute of Behavioral Sciences (IBS)</strong> — a well-regarded psychiatric and drug rehabilitation center — and suggested it might suit. There was only one practical concern: IBS was far from where I lived, and at the time I relied entirely on public transport.
+            </p>
+            <div class="pullquote">
+                <p>"It was far from where I lived and at the time I had no car — only public transport. When Professor Raza-ur-Rehman asked how I would manage the distance, my answer was simple: <em>I'll manage.</em>"</p>
+            </div>
+            <p>
+                And manage I did — beginning what would become five years of near-continuous presence at IBS, arriving by public transport through Karachi's evenings, and returning home only for a few hours of rest before the next shift began.
+            </p>
+        </div>
+    </div>
+
+    <!-- MADAM SHAHLA & THE JOINING -->
+    <div class="story-block reverse fade-up">
+        <div class="story-main">
+            <span class="section-label">The Door That Was Opened</span>
+            <h2 class="section-title">Madam Shahla Ahmed — <em>The Administrator Who Said Yes</em></h2>
+            <div class="section-rule"></div>
+            <p>
+                I arrived at IBS, met the institution's administrator — <strong>Madam Shahla Ahmed</strong> — and was then interviewed by <strong>Professor Sohail</strong>, the institute's senior clinical lead. Madam Shahla Ahmed's role in the process was far more than procedural. As the administrative backbone of the institute, it was her judgment, her eye for character, and her decision to move the process forward that opened this chapter for me.
+            </p>
+            <p>
+                Her significance in my tenure at IBS cannot be overstated. She was the person who facilitated my entry, who navigated the institutional formalities, and whose confidence in me made the subsequent offer — and all the years that followed — possible. In the quiet arithmetic of a career, some people tip the scales. Madam Shahla Ahmed was one of those people.
+            </p>
+            <p>
+                I began working at IBS from <strong>1st October 2014</strong>, taking on duties independently whenever and whatever time was required — evenings, nights, weekends, public holidays.
+            </p>
+        </div>
+        <div class="story-aside">
+            <div class="aside-card">
+                <p class="card-eyebrow">Key Figure</p>
+                <h4>Madam Shahla Ahmed</h4>
+                <p>Administrator, IBS — the institutional anchor whose professionalism and confidence in me made this chapter possible. Her role extended well beyond administration; she shaped the culture of welcome and integrity that defined my life at IBS.</p>
+                <div class="divider"></div>
+                <span class="aside-tag gold">Administrator</span>
+                <span class="aside-tag teal">IBS</span>
+                <span class="aside-tag navy">Instrumental Figure</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- People Section -->
-    <section class="people">
-        <div class="people-container">
-            <h2>Key People Along the Way</h2>
-            <div class="people-grid">
-                <div class="person-card">
-                    <div class="person-avatar">RR</div>
-                    <h3 class="person-name">Prof. Dr. Raza ur Rehman</h3>
-                    <div class="person-role">Mentor & Guide</div>
-                    <p class="person-desc">Head of Department of Psychiatry at Civil Hospital Karachi. One of Pakistan's top psychiatrists. His kindness and mentorship opened the door to IBS and shaped my psychiatric journey.</p>
-                </div>
-
-                <div class="person-card featured">
-                    <div class="person-avatar">SA</div>
-                    <h3 class="person-name">Madam Shahla Ahmed</h3>
-                    <div class="person-role">Administrator</div>
-                    <p class="person-desc">Her significant impact on my joining and subsequent tenure at IBS was truly instrumental. From the first interview to my years of service, her support and guidance were invaluable in shaping my professional path at the institute.</p>
-                </div>
-
-                <div class="person-card">
-                    <div class="person-avatar">PS</div>
-                    <h3 class="person-name">Professor Sohail</h3>
-                    <div class="person-role">Interviewer & Senior</div>
-                    <p class="person-desc">Conducted my interview in September 2014 and played a key role in my induction into the IBS team as a reliever RMO.</p>
-                </div>
-
-                <div class="person-card">
-                    <div class="person-avatar">AQ</div>
-                    <h3 class="person-name">Dr. Abdul Qadeer Khan</h3>
-                    <div class="person-role">Co-founder & Patron</div>
-                    <p class="person-desc">Pakistan's famous top nuclear scientist and co-founder of IBS. His letter of appreciation stands as a proud milestone in my career.</p>
-                </div>
+    <!-- NIGHT SHIFT SECTION -->
+    <div class="night-section fade-up">
+        <span class="section-label">The Reality of Service</span>
+        <h2 class="section-title" style="color:white;">Six Nights a Week — <em style="color:var(--gold-light);">The Night RMO Years</em></h2>
+        <div class="section-rule"></div>
+        <p style="color:rgba(255,255,255,0.6); font-size:1rem; max-width:680px; line-height:1.85; margin-bottom:0.5rem;">
+            Within months of joining, management offered me a fixed position as <strong style="color:var(--gold-light);">Night RMO</strong> — a testament to the trust I had already earned. I accepted. What followed was a schedule that would define the next five years.
+        </p>
+        <div class="night-grid">
+            <div class="night-card">
+                <h4>Six Nights a Week</h4>
+                <p>Every weekday evening, I was at IBS. Six nights a week, through Karachi's heat, rains, and restless city rhythms — I was there.</p>
+            </div>
+            <div class="night-card">
+                <h4>Sundays & Gazetted Holidays — 24 Hours</h4>
+                <p>On Sundays and all gazetted public holidays, my duties extended to full 24-hour shifts for which overtime was provided. Days off were not really days off.</p>
+            </div>
+            <div class="night-card">
+                <h4>More Time at Hospital Than Home</h4>
+                <p>Home became the place for a few hours of sleep and essential chores. By evening, I was back. The hospital became, in every practical sense, where I lived.</p>
+            </div>
+            <div class="night-card">
+                <h4>Admission to Recovery — Every Night</h4>
+                <p>From the moment a patient arrived at their most acute and vulnerable point, through the long arc of stabilisation and early recovery — I was present for all of it, night after night.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Institute of Behavioral Sciences — Dr. A.Q. Khan Center | October 2014 — February 2019</p>
-        <p style="margin-top: 0.5rem;">Crafted with <span class="heart">❤</span> and gratitude</p>
-    </footer>
+    <!-- CLINICAL DEPTH -->
+    <div class="story-block fade-up">
+        <div class="story-aside">
+            <div class="aside-card">
+                <p class="card-eyebrow">The Institute</p>
+                <h4>IBS — Institute of Behavioral Sciences, Dr. A.Q. Khan Center</h4>
+                <p>A dedicated psychiatric and drug rehabilitation center in Karachi. Named in honour of Dr. Abdul Qadeer Khan, Pakistan's celebrated nuclear scientist and co-founder — the institute carries a legacy of scientific distinction alongside its clinical mission.</p>
+                <div class="divider"></div>
+                <span class="aside-tag teal">Psychiatry</span>
+                <span class="aside-tag navy">Drug Rehabilitation</span>
+                <span class="aside-tag gold">Behavioral Sciences</span>
+            </div>
+        </div>
+        <div class="story-main">
+            <span class="section-label">Clinical Formation</span>
+            <h2 class="section-title">What Five Years in the Wards <em>Actually Teaches</em></h2>
+            <div class="section-rule"></div>
+            <p>
+                IBS serves patients across the full spectrum of psychiatric illness and substance dependence — a complex, demanding patient population that requires not just clinical knowledge but an entirely different register of human presence. Over five years, spending more hours inside the hospital than outside it, I developed a depth of psychiatric clinical fluency that cannot be acquired in any other way.
+            </p>
+            <p>
+                I learned to read the gradations of acute psychiatric presentation — to distinguish, in the early hours of a night shift, the precise stage of a patient's crisis, and to calibrate my response accordingly. I became fluent in the language of recovery: its rhythms, its setbacks, its quiet milestones. I understood, from repeated lived experience, how a person looks at the worst point of admission — and how they look weeks later.
+            </p>
+            <div class="pullquote">
+                <p>Spending whole nights with patients from the moment of admission at their worst point through the early stages of recovery — that is not clinical exposure. <em>That is clinical formation.</em></p>
+            </div>
+            <p>
+                My capacity to interact with mentally ill patients and those in addiction recovery, to recognize the subtle factors that precipitate relapse, and to provide emergency psychiatric intervention in real time — all of this was shaped during these five years at IBS.
+            </p>
+        </div>
+    </div>
 
-    <script>
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <!-- HONOUR -->
+    <div class="honour-block fade-up">
+        <div class="honour-seal">🏅</div>
+        <div class="honour-content">
+            <p class="honour-eyebrow">Distinguished Recognition</p>
+            <h3>Letter of Appreciation from<br>Dr. Abdul Qadeer Khan</h3>
+            <p>
+                Among the most distinguished recognitions of my career, I received a personal <strong>Letter of Appreciation</strong> from <strong>Dr. Abdul Qadeer Khan</strong> — Pakistan's celebrated nuclear scientist and co-founder of the Institute of Behavioral Sciences — in recognition of my exceptional and dedicated services at IBS. A letter from one of Pakistan's most towering national figures, acknowledging the quiet commitment of a physician who chose to show up, night after night, for five years.
+            </p>
+        </div>
+    </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+    <!-- MENTORS -->
+    <div class="fade-up">
+        <span class="section-label">The People Who Shaped This Chapter</span>
+        <h2 class="section-title">Figures of <em>Influence & Guidance</em></h2>
+        <div class="section-rule"></div>
+        <div class="mentors-row">
+            <div class="mentor-card">
+                <p class="mentor-role">Referring Mentor</p>
+                <h3 class="mentor-name">Professor Raza-ur-Rehman</h3>
+                <p class="mentor-title">Professor & Head of Psychiatry · Civil Hospital Karachi</p>
+                <p class="mentor-desc">One of Pakistan's foremost senior psychiatrists, whose generosity with clinical access and whose quiet recommendation opened the door to IBS for me. A mentor who shaped not only my clinical thinking but my professional path itself.</p>
+            </div>
+            <div class="mentor-card">
+                <p class="mentor-role">Administrator & Key Enabler</p>
+                <h3 class="mentor-name">Madam Shahla Ahmed</h3>
+                <p class="mentor-title">Administrator · Institute of Behavioral Sciences</p>
+                <p class="mentor-desc">The institutional anchor of IBS whose professionalism and confidence in me made this entire chapter possible. Her significance in facilitating my joining and supporting my tenure remains a defining element of this story.</p>
+            </div>
+            <div class="mentor-card">
+                <p class="mentor-role">Clinical Interviewer & Senior Lead</p>
+                <h3 class="mentor-name">Professor Sohail</h3>
+                <p class="mentor-title">Senior Clinical Lead · Institute of Behavioral Sciences</p>
+                <p class="mentor-desc">The senior clinical authority at IBS under whose institutional oversight I was formally appointed and served throughout my tenure — providing the clinical leadership framework within which five years of night duty took shape.</p>
+            </div>
+        </div>
+    </div>
 
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            observer.observe(item);
-        });
+</div>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+<!-- CLOSING -->
+<div class="closing-band">
+    <h2>February 2019 — <em>A Chapter Honourably Closed</em></h2>
+    <p>
+        My tenure at IBS concluded in February 2019 — on entirely good terms, with mutual respect and the quiet satisfaction of work done with integrity over five demanding years. The clinical depth I gained here continues to inform every patient encounter that has followed.
+    </p>
+    <div class="portfolio-links">
+        <a href="https://hamidfazal.github.io/" class="pill-link dark">← Back to Portfolio</a>
+        <a href="https://hamidfazal.github.io/SSWAB-Trust-Kidney-Care/" class="pill-link outline">SSWAB Kidney Care Chapter →</a>
+        <a href="https://hamidfazal.github.io/community-outreach-/" class="pill-link outline">Community Outreach Chapter →</a>
+    </div>
+</div>
 
-        // Parallax effect on hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.4}px)`;
+<footer>
+    <p>&copy; 2026 Dr. Hamid Fazal · <a href="https://hamidfazal.github.io">hamidfazal.github.io</a></p>
+</footer>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
             }
         });
-    </script>
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
+
